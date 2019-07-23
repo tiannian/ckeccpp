@@ -26,9 +26,9 @@ class KeccakF {
     public:
         void permute();
     public:
-        const size_t nbytes = sizeof(T) * 25;
-        const size_t nbits = nbytes * 8;
-        const size_t nround = round_map<T>::value * 2 + 18;
+        static const size_t nbytes = sizeof(T) * 25;
+        static const size_t nbits = nbytes * 8;
+        static const size_t nround = round_map<T>::value * 2 + 18;
         const T RC[24] = {
             RC_X(T, 0x01), RC_X(T, 0x1a), RC_X(T, 0x5e), RC_X(T, 0x70),
             RC_X(T, 0x1f), RC_X(T, 0x21), RC_X(T, 0x79), RC_X(T, 0x55),
